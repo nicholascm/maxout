@@ -21,18 +21,21 @@
       <table class = "table">
         <thead>
           <tr>
-            <th>Exercise Id</th>
+            <th>Exercise</th>
             <th>Target Date</th>
             <th>Reps</th>
             <th>Weight</th>
+            <th>Progress</th>
           </tr>
           <tbody>
       @foreach ($goals as $goal)
           <tr>
-            <td>{{$goal->exercise_id}}</td>
+            <td>{{$goal->exercise->name}}</td>
             <td>{{$goal->target_date}}</td>
             <td>{{$goal->reps}}</td>
             <td>{{$goal->weight}}</td>
+            <td><a class = "btn btn-link" href = "{{ url('/goal/'.$goal->id)}}">Progress</a></td>
+
           </tr>
       @endforeach
     </tbody>

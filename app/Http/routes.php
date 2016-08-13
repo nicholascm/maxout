@@ -23,3 +23,6 @@ Route::get('/test', function() {
 
 Route::get('/goal/create', 'GoalController@create');
 Route::post('/goal', 'GoalController@store');
+Route::get('/goal/{id}', 'GoalController@show');
+
+Route::post('/measurement/create/{id}', 'MeasurementController@store');

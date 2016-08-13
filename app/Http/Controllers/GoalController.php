@@ -34,7 +34,13 @@ class GoalController extends Controller
         'reps' => $request->input('reps')
       ]);
 
-      return redirect()->action('DashController@home'); 
+      return redirect()->action('DashController@home');
+    }
+
+    public function show ($id) {
+      $goal = Goal::findOrFail($id);
+      //$goal_measurements = $goal->measurements();
+      return view ('goals.detail', ['goal' => $goal/*, 'measurements'=> $goal_measurements*/]);
     }
 
     public function update($id) {

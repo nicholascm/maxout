@@ -13,7 +13,6 @@ class DashController extends Controller
     }
 
     public function home(Request $request) {
-
       return view('dash.home', ['user'=> $this->user, 'goals' => $this->goals]);
     }
 

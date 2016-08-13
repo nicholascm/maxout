@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Goal; 
+use App\Goal;
 
 class Measurement extends Model
 {

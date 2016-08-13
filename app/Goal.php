@@ -20,6 +20,7 @@ class Goal extends Model
     }
 
     public function exercise() {
-      return $this->hasOne(Exercise::class);
+      return $this->hasOne(Exercise::class, 'id', 'exercise_id');
     }
+
 }
