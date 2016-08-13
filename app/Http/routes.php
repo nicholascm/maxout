@@ -20,3 +20,6 @@ Route::get('/dash', 'DashController@home');
 Route::get('/test', function() {
   return view('welcome');
 });
+
+Route::get('/goal/create', 'GoalController@create');
+Route::post('/goal', 'GoalController@store');
