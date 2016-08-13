@@ -13,7 +13,6 @@
 
       <form class = "form-inline" method = "POST" action ="{{ url('/measurement/create/'.$goal->id)}}">
         {!! csrf_field() !!}
-
       <div class="form-group">
         <label for="weight">Weight</label>
         <input type="number" name="weight" class="form-control" id="weight" placeholder="Weight">

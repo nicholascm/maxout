@@ -3,17 +3,28 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\User;
+use App\Classes\Progress;
 
-class DashController extends Controller
+class PublicPageController extends Controller
 {
     public function __construct(Request $request) {
-      $this->middleware('auth');
-      $this->goals = $request->user()->goals()->get();
-      $this->user = $request->user();
+
     }
 
-    public function home(Request $request) {
-      return view('dash.home', ['user'=> $this->user, 'goals' => $this->goals]);
+    public function show(Request $request, $username) {
+      $user = User::where('username', '=', $username)
+        ->first();
+      if (is_object($user)){
+        $goal_progress = new Progress($user->goals);
+        $days_idle = $goal_progress->getDaysSinceLastWorked();
+
+        return view('social.publicpage', ['user' => $user, 'days_idle' => $days_idle]);
+      } else {
+        return view('dash.home');
+      }
     }
+
+
 
 }
