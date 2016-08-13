@@ -6,12 +6,15 @@ use App\Http\Requests;
 
 class DashController extends Controller
 {
-    public function __construct() {
-      //$this->middleware('auth');
+    public function __construct(Request $request) {
+      $this->middleware('auth');
+      $this->goals = $request->user()->goals()->get();
+      $this->user = $request->user();
     }
 
     public function home(Request $request) {
-      return view('dash.home');
+
+      return view('dash.home', ['user'=> $this->user, 'goals' => $this->goals]);
     }
 
 }
