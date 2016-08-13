@@ -17,12 +17,19 @@ class MeasurementController extends Controller
       $this->user = $request->user();
     }
 
+    //provides all the measurements for a goal in JSON format
+    public function index (Request $request, $id) {
+      $goal = Goal::findOrFail($id);
+      $goal_measurements = $goal->measurements();
+      return response()->json($goal_measurements);
+    }
+
     public function store(Request $request, $id) {
 
-      //really need some validations and failsafes here 
+      //really need some validations and failsafes here
       Measurement::create([
         'goal_id' => $id,
-        'completed_date_time'=> date('Y-m-d'),
+        'completed_date_time'=> date('Y-m-d H:i:s'),
         'weight'=> $request->input('weight'),
         'reps' => $request->input('reps')
       ]);
