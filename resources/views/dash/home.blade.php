@@ -20,7 +20,7 @@
 
 
     <div class = "col-md-7">
-      <a href = "{{ url('/goal/create') }}" class = "btn btn-primary pull-right">New Goal</a>
+      <a href = "{{ url('/goal/create') }}" class = "btn btn-primary pull-right">Add New Goal</a>
 
       <h3>My Goals</h3>
 
