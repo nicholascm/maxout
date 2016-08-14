@@ -2,15 +2,13 @@
 
 An app for tracking your max out progress when you're lifting.
 
-Tasks Completed
-
 ## Description
 
 Maxout is an app that power lifters can use to keep track of their progress towards lifting goals. A lifter can create an account and then immediately start adding goals for common power lifting lifts complete with target date/weight/reps. Whenever the lifter works out and needs to add progress towards a goal, they can log a measurement for each of their goals. The measurements can then be viewed in a graph or chart format while signed in and looking at their dashboard.
 
 ## Inspiration
 
-I've been big into weightlifting for a very long time, competing as a high-schooler in the bench press and clean and jerk, and then as a cheerleader (lifting people). Weightlifters are very goal oriented and I felt like an app like this would be useful and fun to make!
+I've been big into weightlifting for a very long time, competing as a high-schooler in the bench press and clean and jerk, and then as a cheerleader (lifting people). Weightlifters are very goal oriented and I felt like an app like this would be useful and fun to make! I also believe that there's a huge social aspect to weightlifting for most people. Tracking/sharing information about progress is both exciting and helpful!
 
 ## More Info and Commentary
 
