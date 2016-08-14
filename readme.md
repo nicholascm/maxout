@@ -12,13 +12,16 @@ Maxout is an app that power lifters can use to keep track of their progress towa
 
 I've been big into weightlifting for a very long time, competing as a high-schooler in the bench press and clean and jerk, and then as a cheerleader (lifting people). Weightlifters are very goal oriented and I felt like an app like this would be useful and fun to make!
 
-## More Info
+## More Info and Commentary
 
-There's a lot of things I'd like to do more on this application. I started creating a "public page" where people could have a public facing dashboard to share with people who want to see their progress. It's nowhere near finished.
+There's a lot of things I'd like to do more on this application. I started creating a "public page" where people could have a public facing dashboard to share with people who want to see their progress (its accessible via `/view/{yourusername}`). It's nowhere near finished. There is a class called Progress in `App\Classes` that has the beginnings of some logic I want to use to provide insights to the lifters based on their measurements. It REALLY needs unit test coverage and they are not there yet nor is it done. I could actually see needing a base class for the analytics portion so I could expand it to look at the list of goals in addition to the measurements.
 
 ## Code Test Tasks
 
 * [x] Create a git repo and make meaningful periodic commits with appropriate comments
+* [ ] Tests are important: unit tests and or Behat bevioral tests.
+  * Not much here...I did start unit testing for the `App\Classes\Progress` class
+* [ ] Fire events and listeners
 * [x] Implement an authentication scheme with Policies or Middleware
   I used the Laravel included authentication and middleware. In another application I'm working on, I used JSON Web Tokens so that I could hold the token in a native app and do CORS.
 * [x] Show your data model skills - create models with complex relations

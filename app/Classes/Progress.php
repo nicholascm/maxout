@@ -5,10 +5,11 @@ use DateTime;
 
 class Progress {
 
+  //get a list of measurements from a goal
   public function __construct($measurements_array) {
       $this->measurements = $measurements_array;
   }
-
+  
   private function getLatestMeasurementDate() {
     $dates_only = $this->measurements->map(function($item, $key) { return $item->completed_date_time; });
 
