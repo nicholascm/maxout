@@ -14,6 +14,8 @@ I've been big into weightlifting for a very long time, competing as a high-schoo
 
 There's a lot of things I'd like to do more on this application. I started creating a "public page" where people could have a public facing dashboard to share with people who want to see their progress (its accessible via `/view/{yourusername}`). It's nowhere near finished. There is a class called Progress in `App\Classes` that has the beginnings of some logic I want to use to provide insights to the lifters based on their measurements. It REALLY needs unit test coverage and they are not there yet nor is it done. I could actually see needing a base class for the analytics portion so I could expand it to look at the list of goals in addition to the measurements.
 
+Additionally, as you can probably see, I spent the bare minimum on styling...I think some styling/colors would very much help!
+
 ## Code Test Tasks
 
 * [x] Create a git repo and make meaningful periodic commits with appropriate comments
