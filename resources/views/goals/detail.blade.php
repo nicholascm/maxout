@@ -3,13 +3,19 @@
 <div class = "container">
   <div class = "row">
     <div class = "col-md-3">
-      <h3>Goal Summary</h3>
-      <p><strong>Exercise:</strong> {{$goal->exercise->name}}</p>
-      <p><strong>Target Date:</strong>{{$goal->target_date}} </p>
-      <p><strong>Reps:</strong> {{$goal->reps}} </p>
-      <p><strong>Weight:</strong> {{$goal->weight}} </p>
-      <p>{{$statement->getDaysSinceLastWorked()}} Days since you last worked on this goal. </p>
-      <p>{{$statement->getProgressStatement()}}</p>
+      <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Goal Summary</h3>
+      </div>
+      <div class="panel-body">
+        <p><strong>Exercise:</strong> {{$goal->exercise->name}}</p>
+        <p><strong>Target Date:</strong>{{$goal->target_date}} </p>
+        <p><strong>Reps:</strong> {{$goal->reps}} </p>
+        <p><strong>Weight:</strong> {{$goal->weight}} </p>
+        <p>{{$statement->getDaysSinceLastWorked()}} days since you last worked on this goal. </p>
+        <p>{{$statement->getProgressStatement()}}</p>
+      </div>
+      </div>
     </div>
     <div class = "col-md-9">
 
@@ -28,7 +34,7 @@
           LOG WORK
       </button>
       </form>
-      <h3>My Progress on {{$goal->exercise->name}}</h3>
+      <h3>My Progress ({{$goal->exercise->name}})</h3>
       <ul class = "nav nav-tabs" role = "tablist">
         <li role = "presentation" class = "active"><a data-toggle = "tab" href = "#graph">Graph</a></li>
           <li role = "presentation"><a data-toggle="tab" href = "#table">Table</a></li>
