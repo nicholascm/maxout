@@ -3,12 +3,14 @@
 <div class = "container">
   <div class = "row">
     <div class = "col-md-3">
-      <p> Exercise: {{$goal->exercise->name}}</p>
-      <p> Target Date: {{$goal->target_date}} </p>
-      <p> Reps: {{$goal->reps}} </p>
-      <p> Weight: {{$goal->weight}} </p>
+      <h3>Goal Summary</h3>
+      <p><strong>Exercise:</strong> {{$goal->exercise->name}}</p>
+      <p><strong>Target Date:</strong>{{$goal->target_date}} </p>
+      <p><strong>Reps:</strong> {{$goal->reps}} </p>
+      <p><strong>Weight:</strong> {{$goal->weight}} </p>
+      <p>{{$statement->getDaysSinceLastWorked()}} Days since you last worked on this goal. </p>
+      <p>{{$statement->getProgressStatement()}}</p>
     </div>
-
     <div class = "col-md-9">
 
       <form class = "form-inline" method = "POST" action ="{{ url('/measurement/create/'.$goal->id)}}">
