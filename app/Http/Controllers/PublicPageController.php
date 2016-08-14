@@ -21,7 +21,4 @@ class PublicPageController extends Controller
         return redirect('/');
       }
     }
-
-
-
 }
