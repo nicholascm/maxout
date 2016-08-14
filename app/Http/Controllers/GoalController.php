@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Exercise;
 use App\Goal;
+use App\Classes\Progress; 
 use Validator;
 
 class GoalController extends Controller
@@ -40,7 +41,9 @@ class GoalController extends Controller
     public function show ($id) {
       $goal = Goal::findOrFail($id);
       //$goal_measurements = $goal->measurements();
-      return view ('goals.detail', ['goal' => $goal/*, 'measurements'=> $goal_measurements*/]);
+      $statement = new Progress($goal->measurements());
+
+      return view ('goals.detail', ['goal' => $goal, 'statement' => $statement->getProgressStatement()]);
     }
 
     public function update($id) {
