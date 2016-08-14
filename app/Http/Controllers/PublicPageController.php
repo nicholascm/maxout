@@ -15,11 +15,10 @@ class PublicPageController extends Controller
     public function show(Request $request, $username) {
       $user = User::where('username', '=', $username)
         ->first();
-      if (is_object($user)){
-
-        return view('social.publicpage', ['user' => $user, 'days_idle' => $days_idle]);
+      if (!is_null($user)){
+        return view('social.publicpage', ['user' => $user]);
       } else {
-        return view('dash.home');
+        return redirect('/');
       }
     }
 
