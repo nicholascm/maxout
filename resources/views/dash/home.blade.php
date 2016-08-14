@@ -25,6 +25,9 @@
       <h3>My Goals</h3>
 
       <ul class = "list-group">
+      @if(count($goals) == 0)
+      <p class = "text-center">No Goals Yet! Click "New Goal" to start getting stronger!</p>
+      @endif
       @foreach($goals as $goal)
       <li class = "list-group-item">
         <div class = "row">
@@ -36,6 +39,7 @@
             <strong>Reps:</strong> {{$goal->reps}}
             <strong>Weight:</strong> {{$goal->weight}}
             <a class = "btn btn-info pull-right" href = "{{ url('/goal/'.$goal->id)}}">Log Progress</a>
+
           </div>
           </div>
 

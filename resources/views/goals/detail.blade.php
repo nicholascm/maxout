@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+@goal('GoalDetailCheck')
+
 <div class = "container">
   <div class = "row">
     <div class = "col-md-3">
