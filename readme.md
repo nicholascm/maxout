@@ -18,19 +18,19 @@ There's a lot of things I'd like to do more on this application. I started creat
 
 ## Code Test Tasks
 
-[x] Create a git repo and make meaningful periodic commits with appropriate comments
-[x] Implement an authentication scheme with Policies or Middleware
-  * I used the Laravel included authentication and middleware. In another application I'm working on, I used JSON Web Tokens so that I could hold the token in a native app and do CORS.
-[x] Show your data model skills - create models with complex relations
-[x] Implement a service, either yours or a third party, and instantiate via a service provider
+* [x] Create a git repo and make meaningful periodic commits with appropriate comments
+* [x] Implement an authentication scheme with Policies or Middleware
+  I used the Laravel included authentication and middleware. In another application I'm working on, I used JSON Web Tokens so that I could hold the token in a native app and do CORS.
+* [x] Show your data model skills - create models with complex relations
+* [x] Implement a service, either yours or a third party, and instantiate via a service provider
   * AB Testing ServiceProvider added (I chose this because you mentioned that SalterMitchell does a lot of AB Testing). There's a basic test in place on the landing page.  
-[ ] Organize and deploy your Javascript with RequireJS
+* [ ] Organize and deploy your Javascript with RequireJS
   * TBH the Javascript in my application is not well organized at all. If I had a little more time, this is one of the first things I would do. Some of it is loaded via CDN (not actually included as a dependency) which I did for expediency.
-[x] Responsive design with Bootstrap and Sass
+* [x] Responsive design with Bootstrap and Sass
   * Bootstrap responsive design used throughout the application
-[x] Integrate with Social Media Using AddThis
+* [x] Integrate with Social Media Using AddThis
   * I hadn't used AddThis and just added one of their basic plugins. Unfortunately it is visible throughout the app which doesn't make sense as some of the pages are 'authentication only'.
-[ ] Integrate with any other 3rd Party API
+* [ ] Integrate with any other 3rd Party API
   * None present - I would have liked to add a feature for people to become part of a "Gym" where they could post and share progress. The Gym info could come from Yelp and possibly even use check-in info from Square or Facebook. Just didn't get to this in the time I had though.
 
 ## Special Deployment Instructions
